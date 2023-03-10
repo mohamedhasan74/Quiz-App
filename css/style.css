@@ -1,0 +1,46 @@
+:root {
+  --main-color: #683eba;
+  --primary-color: #d54c54;
+}
+main {
+  background-image: url("../images/bg-img.png");
+}
+.heading {
+  border: 3px solid;
+  border-left-color: var(--main-color);
+  border-right-color: var(--primary-color);
+}
+.heading::before {
+  top: 0;
+}
+.heading::after {
+  bottom: 0;
+}
+.heading::before,
+.heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-color) 50%,
+    var(--primary-color) 50%
+  );
+}
+
+#titleDifficulty {
+  background-color: var(--main-color);
+}
+#titleNumberOfQ {
+  background-color: var(--primary-color);
+}
+li {
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
